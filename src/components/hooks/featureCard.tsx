@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface FeaturedCardProps{
-    icon: string;
+    icon: React.ReactNode;
     title: string;
     description: string
   }
