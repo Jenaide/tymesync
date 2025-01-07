@@ -1,3 +1,4 @@
+import { Features } from "@/components/landing_page_ui/Features";
 import { Header } from "@/components/landing_page_ui/Header";
 import { HeroSection } from "@/components/landing_page_ui/HeroSection";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <div className="flex-1 pt-16">
         <HeroSection />
+        <Features />
       </div>
     </div>
   );
