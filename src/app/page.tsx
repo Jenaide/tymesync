@@ -2,6 +2,7 @@ import { Benefits } from "@/components/landing_page_ui/Benefits";
 import { Features } from "@/components/landing_page_ui/Features";
 import { Header } from "@/components/landing_page_ui/Header";
 import { HeroSection } from "@/components/landing_page_ui/HeroSection";
+import { Pricing } from "@/components/landing_page_ui/Pricing";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <HeroSection />
         <Features />
         <Benefits />
+        <Pricing />
       </div>
     </div>
   );
