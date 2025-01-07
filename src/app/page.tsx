@@ -1,7 +1,9 @@
 import { Benefits } from "@/components/landing_page_ui/Benefits";
 import { Features } from "@/components/landing_page_ui/Features";
+import { Footer } from "@/components/landing_page_ui/Footer";
 import { Header } from "@/components/landing_page_ui/Header";
 import { HeroSection } from "@/components/landing_page_ui/HeroSection";
+import { JoinUsSection } from "@/components/landing_page_ui/join-us";
 import { Pricing } from "@/components/landing_page_ui/Pricing";
 
 
@@ -14,7 +16,9 @@ export default function Home() {
         <Features />
         <Benefits />
         <Pricing />
+        <JoinUsSection />
       </div>
+      <Footer />
     </div>
   );
 }
