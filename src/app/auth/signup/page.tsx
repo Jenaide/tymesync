@@ -35,7 +35,7 @@ export default function SignIn(){
                             </div>
                             <div className="relative flex justify-center text-xs uppercase">
                                 <span className="bg-gradient-to-br from-purple-50 to-pink-50 px-2 text-muted-foreground">
-                                    Or continue wit
+                                    Or continue with
                                 </span>
                             </div>
                         </div>

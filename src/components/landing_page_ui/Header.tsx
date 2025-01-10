@@ -54,7 +54,7 @@ export function Header(){
                 </nav>
                 <div className="hidden md:block">
                 <Button size="sm" className="bg-primary font-sans hover:bg-primary/90 text-white">
-                    Get Started
+                    <Link href={"/auth/login"}>Get Started</Link>
                 </Button>
                 </div>
                 <button

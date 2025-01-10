@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection(){
     return (
@@ -28,7 +29,7 @@ export function HeroSection(){
                     className="space-x-4"
                 >
                     <Button size="lg" className="bg-primary font-sans hover:bg-primary/90 text-white">
-                    Get Started
+                        <Link href={"/auth/signup"}>Get Started</Link>
                     <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                     <Button size="lg" variant="outline" className="font-sans border-primary text-primary hover:bg-primary/10">
