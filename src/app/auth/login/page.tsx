@@ -47,7 +47,7 @@ export default function LogIn(){
 
                         <div className="mt-4 text-center text-sm font-sans">
                             Don&apos;t have an account?{' '}
-                            <Link href={""} className="underline font-sans underline-offset-4 hover:text-primary">Sign up</Link>
+                            <Link href={"/auth/signup"} className="underline font-sans underline-offset-4 hover:text-primary">Sign up</Link>
                         </div>
                     </div>
                 </div>

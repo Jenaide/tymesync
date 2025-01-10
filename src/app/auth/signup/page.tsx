@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
-import GoogleLogo from "@/../public/google_logo2.png";
-import Image from "next/image";
+import { GoogleAuthButton } from "@/components/SubmitButtons";
+import { signIn } from "@/lib/auth";
 
-export default function SignIn(){
+export default function SignUp(){
     return (
         <div className="min-h-screen w-full bg-gradient-to-br from-purple-50 to-pink-50 p-4 antialiased">
             <Link href={"/"} className="inline-flex font-sans items-center text-sm text-muted-foreground transition-colors hover:text-primary">
@@ -40,14 +40,20 @@ export default function SignIn(){
                             </div>
                         </div>
 
-                        <Button variant={"outline"} className="h-11 w-full text-lg font-sans rounded-full bg-white/50 backdrop-blur-sm hover:bg-white/60">
-                            <Image src={GoogleLogo} alt="google logo" className="size-6 mr-2" />
-                            Google
-                        </Button>
+                        <div>
+                            {/* google sign in */}
+                            <form action={async () => {
+                                "use server"
+                                await signIn("google", { callbackUrl: "/dashboard" });
+                            }}>
+                                <GoogleAuthButton />
+                            </form>
+
+                        </div>
 
                         <div className="mt-4 text-center text-sm font-sans">
                             Have an account?{' '}
-                            <Link href={""} className="underline font-sans underline-offset-4 hover:text-primary">Log in</Link>
+                            <Link href={"/auth/login"} className="underline font-sans underline-offset-4 hover:text-primary">Log in</Link>
                         </div>
                     </div>
                 </div>
