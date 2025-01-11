@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
-import GoogleLogo from "@/../public/google_logo2.png";
-import Image from "next/image";
+import { GoogleAuthButton } from "@/components/SubmitButtons";
+import { signIn } from "@/lib/auth";
 
 export default function LogIn(){
     return (
@@ -40,10 +40,15 @@ export default function LogIn(){
                             </div>
                         </div>
 
-                        <Button variant={"outline"} className="h-11 w-full text-lg font-sans rounded-full bg-white/50 backdrop-blur-sm hover:bg-white/60">
-                            <Image src={GoogleLogo} alt="google logo" className="size-6 mr-2" />
-                            Google
-                        </Button>
+                        <div>
+                            {/* google sign up */}
+                            <form action={async () => {
+                                "use server"
+                                await signIn("google")
+                            }}>
+                                <GoogleAuthButton />
+                            </form>
+                        </div>
 
                         <div className="mt-4 text-center text-sm font-sans">
                             Don&apos;t have an account?{' '}

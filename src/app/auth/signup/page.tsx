@@ -44,7 +44,7 @@ export default function SignUp(){
                             {/* google sign in */}
                             <form action={async () => {
                                 "use server"
-                                await signIn("google", { callbackUrl: "/dashboard" });
+                                await signIn("google");
                             }}>
                                 <GoogleAuthButton />
                             </form>
